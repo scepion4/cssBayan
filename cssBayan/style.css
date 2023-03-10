@@ -63,6 +63,9 @@ transition: all 1s ease-in-out;
    opacity: 1;
    display: block;
 }
+.wrraper:hover>.row>.header>h3{
+   color:black
+}
 .cancel{
    display: none;
 }
@@ -71,4 +74,29 @@ transition: all 1s ease-in-out;
 }
 .row:hover>.header>.plus{
    display: none;
+}
+h3{
+   color:blue
+}
+.row:focus>.img{
+   visibility: visible;
+   opacity: 1;
+   display: block;
+}
+.row:focus>.header>h3{
+   color: black;
+}
+@media (min-width:400px){
+   .wrraper{
+      max-width: 50%;
+      margin: 0px auto;
+   }
+   .img>img{
+      width: 50vw;
+      height:100vh;
+   }
+   .header>img{
+   width: 3vw;
+height:5vh;
+   }
 }
