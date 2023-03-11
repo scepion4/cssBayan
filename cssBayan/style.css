@@ -41,14 +41,12 @@ img{
 }
 .img>img{
    margin-bottom: 2%;
-   width: 100vw;
-   height:50vh;
+   width: 0vw;
+   height: 0vh;
+   transition: all 2s ease-in-out
 }
 .img{
-  display: none;
-  visibility: hidden;
-   opacity: 0;
-   transition: opacity 2s ease-in-out;
+   transition: all 2s ease-in-out;
 }
 .header>img{
 width: 6vw;
@@ -57,11 +55,10 @@ visibility: hidden;
 opacity: 0;
 transition: all 1s ease-in-out;
 }
-.row:hover>.img{
-   transition: opacity 2s ease-in-out;
-   visibility: visible;
-   opacity: 1;
-   display: block;
+.row:hover>.img>img{
+   transition: all 2s ease-in-out;
+   width: 100vw;
+   height:50vh;
 }
 .wrraper:hover>.row>.header>h3{
    color:black
@@ -78,25 +75,38 @@ transition: all 1s ease-in-out;
 h3{
    color:blue
 }
-.row:focus>.img{
-   visibility: visible;
-   opacity: 1;
-   display: block;
+.row:focus>.img>img{
+   width: 100vw;
+   height:50vh;
+}
+.row:active>.img{
+   opacity: 0;
 }
 .row:focus>.header>h3{
    color: black;
+}
+.row:active>.header>h3{
+   color: blue;
 }
 @media (min-width:400px){
    .wrraper{
       max-width: 50%;
       margin: 0px auto;
    }
-   .img>img{
+   .row:hover>.img>img{
       width: 50vw;
       height:100vh;
+      transition: all 2s ease-in-out
+   }
+   .row:focus>.img>img{
+      width: 50vw;
+      height:100vh; 
    }
    .header>img{
    width: 3vw;
-height:5vh;
+height:9vh;
+   }
+   h1{
+      font-size: 35px;
    }
 }
