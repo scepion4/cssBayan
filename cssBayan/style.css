@@ -89,6 +89,21 @@ h3{
    color: blue;
 }
 @media (min-width:400px){
+   .header>img{
+      width: 5vw;
+   height:5vh;
+      }
+      .row:hover>.img>img{
+         width: 96.7vw;
+         height:80vh;
+         transition: all 2s ease-in-out
+      }
+      .row:focus>.img>img{
+         width: 96.7vw;
+         height:80vh; 
+      }
+}
+@media (min-width:600px){
    .wrraper{
       max-width: 50%;
       margin: 0px auto;
